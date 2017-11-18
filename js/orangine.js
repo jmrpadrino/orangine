@@ -8,10 +8,7 @@ $(document).ready( function(){
 })
 function doLoader(){
     loaderContent = '<div class="orangine-loader">';
-    loaderContent += '<div class="loader-container">';
-    loaderContent += '<img src="'+orangine.orangineTheme+'/images/loader-animation.gif">';
-    loaderContent += '<span class="orangine-loader-text">Orangine Love!</span>';
-    loaderContent += '</div>';
+    loaderContent += '<img class="loader-gif" src="'+orangine.orangineTheme+'/images/loader-animation.gif">';
     loaderContent += '</div>';
     $('body').prepend(loaderContent);
 }

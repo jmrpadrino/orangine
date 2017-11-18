@@ -1,9 +1,16 @@
-<?php get_header(); the_post(); ?>
+<?php get_header(); the_post(); $prefix = 'orangine__'; ?>
 <?php //echo the_title(); ?>
-<div class="container" style="margin-top: 72px; font-size: 18px; line-height: 1.5;">
+<div class="container" style="margin: 36px 0;">
     <div class="row">
         <div class="col-sm-7">
             <?php the_content(); ?>
+            <?php
+                $mision = get_post_meta( get_the_ID(), $prefix . 'orangine_mision', true);
+                if (!empty($mision)){
+                    echo '<h2>Misión</h2>';
+                    echo '<div class="mision-placeholder">'. $mision . '</div>';
+                }
+            ?>
         </div>
         <div class="col-sm-5">
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact-redondo-grande.png" class="img-responsive" style="border-radius: 50%; border: 10px solid white; box-shadow: 0px 0px 17px black;" width="350" height="350">
@@ -11,17 +18,25 @@
     </div>
     <div class="row">
         <div class="col-sm-7">
-            <?php the_content(); ?>
+            <?php
+                $vision = get_post_meta( get_the_ID(), $prefix . 'orangine_vision', true);
+                if (!empty($vision)){
+                    echo '<h2>Visión</h2>';
+                    echo '<div class="mision-placeholder">'. $vision . '</div>';
+                }
+                $valores = get_post_meta( get_the_ID(), $prefix . 'orangine_valores', true);
+                if (!empty($valores)){
+                    echo '<h2>Valores</h2>';
+                    echo '<div class="mision-placeholder">'. $valores . '</div>';
+                }
+            ?>
         </div>
         <div class="col-sm-5">
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact-redondo-mediano.png" class="img-responsive" style="border-radius: 50%; border: 10px solid white; box-shadow: 0px 0px 17px black;" width="250" height="250">
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-7">
-            <?php the_content(); ?>
-        </div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 col-sm-offset-7">
             <img src="<?php echo get_template_directory_uri(); ?>/images/contact-redondo-pequeno.png" class="img-responsive" style="border-radius: 50%; border: 10px solid white; box-shadow: 0px 0px 17px black;" width="150" height="150">
         </div>
     </div>
@@ -54,3 +69,4 @@
         </div>
     </div>
 </div>
+<?php get_footer(); ?>

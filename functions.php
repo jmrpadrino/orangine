@@ -468,5 +468,37 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+// ORANGINE METABOXES
+add_filter( 'rwmb_meta_boxes', 'orangine_register_meta_boxes' );
+/*-- METABOXES --*/
+function orangine_register_meta_boxes( $meta_box ) {
 
+    $prefix = 'orangine__';
+    
+    $meta_box[] = array(
+        'id' => 'orangine_nosotros_ino',
+        'title' => 'Orangine',
+        'pages' => array('page'),
+        'context' => 'normal',
+        'priority' => 'default',
+        'fields' => array(
+            array(
+                'name' => 'Misión',
+                'id' => $prefix .'orangine_mision',
+                'type' => 'wysiwyg',
+            ),
+            array(
+                'name' => 'Visión',
+                'id' => $prefix .'orangine_vision',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Valores',
+                'id' => $prefix .'orangine_valores',
+                'type' => 'wysiwyg'
+            )
+        )
+    );
+    return $meta_box;
+}
 ?>

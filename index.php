@@ -50,26 +50,31 @@
     <div class="col-sm-4">
         <div class="row">
             <div class="col-xs-12 home-product-container">
-                <!--h1 style="position: absolute; top: 0; left: 20px; z-index: 1;"><?php echo $productos[0]->post_title; ?></h1-->
-                <img src="<?php echo get_the_post_thumbnail_url( $productos[0]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600">
-                <!--a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[0]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a-->
                 <?php
-                    $product = get_product($productos[0]->ID);
-                    echo '<a href="' . $product->add_to_cart_url() .'"><span class="home-grid-cart-icon">Ca</span></a>"';
+                    $las_categorias = get_the_terms( $productos[0]->ID,  'product_cat');
+                    //echo $las_categorias[0]->term_id;
                 ?>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[0]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[0]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 home-product-container">
-                <!--h1 style="position: absolute; top: 0; left: 20px; z-index: 1;"><?php echo $productos[1]->post_title; ?></h1-->
-                <img src="<?php echo get_the_post_thumbnail_url( $productos[1]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600">
+                <?php
+                    $las_categorias = get_the_terms( $productos[1]->ID,  'product_cat');
+                    //var_dump($las_categorias);
+                ?>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[1]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
                 <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[1]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 home-product-container">
-                <!--h1 style="position: absolute; top: 0; left: 20px; z-index: 1;"><?php echo $productos[2]->post_title; ?></h1-->
-                <img src="<?php echo get_the_post_thumbnail_url( $productos[2]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600">
+                <?php
+                    $las_categorias = get_the_terms( $productos[2]->ID,  'product_cat');
+                    //var_dump($las_categorias);
+                ?>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[2]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
                 <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[2]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
@@ -77,8 +82,11 @@
     <div class="col-sm-4">
         <div class="row">
             <div class="col-xs-12 home-product-container">
-                <!--h1 style="position: absolute; top: 0; left: 20px; z-index: 1;"><?php echo $productos[3]->post_title; ?></h1-->
-                <img src="<?php echo get_the_post_thumbnail_url( $productos[3]->ID, 'large' ); ?>" class="img-responsive" height="1200" width="600">
+                <?php
+                    $las_categorias = get_the_terms( $productos[3]->ID,  'product_cat');
+                    //var_dump($las_categorias);
+                ?>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[3]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
                 <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[3]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
@@ -91,22 +99,31 @@
     <div class="col-sm-4">
         <div class="row">
             <div class="col-xs-12 home-product-container">
-                <!--h1 style="position: absolute; top: 0; left: 20px; z-index: 1;"><?php echo $productos[4]->post_title; ?></h1-->
-                <img src="<?php echo get_the_post_thumbnail_url( $productos[4]->ID, 'full' ); ?>" class="img-responsive" height="600" width="600">
+                <?php
+                    $las_categorias = get_the_terms( $productos[4]->ID,  'product_cat');
+                    //var_dump($las_categorias);
+                ?>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[4]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
                 <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[4]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 home-product-container">
-                <!--h1 style="position: absolute; top: 0; left: 20px; z-index: 1;"><?php echo $productos[5]->post_title; ?></h1-->
-                <img src="<?php echo get_the_post_thumbnail_url( $productos[5]->ID, 'full' ); ?>" class="img-responsive" height="600" width="600">
+                <?php
+                    $las_categorias = get_the_terms( $productos[5]->ID,  'product_cat');
+                    //var_dump($las_categorias);
+                ?>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[5]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
                 <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[5]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 home-product-container">
-                <!--h1 style="position: absolute; top: 0; left: 20px; z-index: 1;"><?php echo $productos[6]->post_title; ?></h1-->
-                <img src="<?php echo get_the_post_thumbnail_url( $productos[6]->ID, 'full' ); ?>" class="img-responsive" height="600" width="600">
+                <?php
+                    $las_categorias = get_the_terms( $productos[6]->ID,  'product_cat');
+                    //var_dump($las_categorias);
+                ?>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[6]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
                 <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[6]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
