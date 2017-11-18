@@ -40,6 +40,12 @@
                 color: white;
                 position: relative;
             }
+            .set-small.orangine-navbar{
+                position: fixed;
+                top:0;
+                z-index: 99999;
+                width: 100%;
+            }
             .navbar{
                 background: none;
                 border: none;
@@ -89,9 +95,26 @@
             }
             .orangine-logo-link{
                 margin-top: 18px;
+                z-index: 99;
+                position: relative;
+                transition: all ease-in .2s;
+            }
+            .set-small .orangine-logo-link{
+                margin-top: 0px;
+            }
+            .orangine-logo-link img{
+                width: 150px;
+                transition: all ease-in .5s;
+            }
+            .set-small .orangine-logo-link img{
+                width: 60px;
             }
             .contact-info{
                 margin-bottom: 36px;
+                z-index: -1;
+            }
+            .set-small .contact-info{                
+                display: none;
             }
             .orangine-menu-items{
                 margin-top: 40px;
@@ -102,6 +125,18 @@
                 height: 40px;
                 top: 44%;
                 width: 100%;
+                display:block;
+                z-index: 1;
+            }
+            .set-small .orange-bar{
+                display:none;
+            }
+            .search-and-social-links{
+                font-size: 24px;
+                padding-top: 4px;
+            }
+            .search-and-social-links a{
+                color: white;                
             }
             .home-product-container{
                 position: relative;
@@ -141,7 +176,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4 col-sm-offset-8 hidden-xs text-right">
-                            <ul class="list-inline">
+                            <ul class="list-inline search-and-social-links">
                                 <li><a href="#"><span class="fa fa-search"></span></a></li>
                                 <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                 <li><a href="#"><span class="fa fa-twitter"></span></a></li>

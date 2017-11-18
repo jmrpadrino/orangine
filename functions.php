@@ -391,12 +391,12 @@ function bootstrap_theme_enqueue_scripts() {
         wp_localize_script( 'orangine', 'orangine', array( 'orangineAjax' => admin_url( 'admin-ajax.php' ), 'orangineTheme' => get_template_directory_uri()));
 
         wp_enqueue_script( 'orangine', get_template_directory_uri() . '/js/orangine.js', array ( 'jquery' ), '1.1', true);
+        wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/9671498c3e.js', array ( 'jquery' ), '1.1', true);
     }
 
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-script', $template_url . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
 	wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
-    wp_enqueue_style( 'bootstrap-style', $template_url . '/css/fontawesome.min.css' );
 
 	//Main Style
 	wp_enqueue_style( 'main-style', get_stylesheet_uri() );

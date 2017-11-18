@@ -6,6 +6,14 @@ $(document).ready( function(){
         $('.orangine-wrapper').animate({opacity: 1}, 400);
     }, 4000);
 })
+$(window).scroll( function(){
+    if($(window).scrollTop() > $('.orangine-navbar').height()-50 ){
+    //if($(window).scrollTop() > 15 ){
+        $('.orangine-navbar').addClass('set-small');
+    }else{
+        $('.orangine-navbar').removeClass('set-small');
+    }
+})
 function doLoader(){
     loaderContent = '<div class="orangine-loader">';
     loaderContent += '<img class="loader-gif" src="'+orangine.orangineTheme+'/images/loader-animation.gif">';
