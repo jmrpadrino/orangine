@@ -1,6 +1,6 @@
 <?php get_header(); the_post(); ?>
 <?php //echo the_title(); ?>
-<div class="container" style="margin-top: 72px; font-size: 18px; line-height: 1.5;">
+<div class="container" style="font-size: 18px; line-height: 1.5;">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="contact-content" style="margin-bottom: 72px;">

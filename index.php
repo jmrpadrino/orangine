@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+    if (is_home() or is_front_page()){
+        get_header('2');
+    }else{
+        get_header(); 
+    }
+?>
 <?php 
     $args = array(
         'post_type' => 'orangine-carousel',
@@ -15,16 +21,17 @@
             <div class="carousel-inner" role="listbox">
                 <?php foreach ($slides as $slide){ ?>
                 <?php if ($count == 0){ ?>
-                <div class="item active" style="background-image: url();">
-                    <img src="<?php echo  get_the_post_thumbnail_url($slide->ID); ?>" class="img-responsive">
+                <div class="item active" style="background-image: url(<?php echo  get_the_post_thumbnail_url($slide->ID); ?>);">
+                    <!--img src="<?php echo  get_the_post_thumbnail_url($slide->ID); ?>" class="img-responsive"-->
                 </div>
                 <?php }else{ ?>
-                <div class="item" style="background-image: url();">
-                    <img src="<?php echo  get_the_post_thumbnail_url($slide->ID); ?>" class="img-responsive">
+                <div class="item" style="background-image: url(<?php echo  get_the_post_thumbnail_url($slide->ID); ?>);">
+                    <!--img src="<?php echo  get_the_post_thumbnail_url($slide->ID); ?>" class="img-responsive"-->
                 </div>
                 <?php } ?>
                 <?php $count++; } // fin foreach ?>
             </div>
+            <!--
             <a class="left carousel-control" href="#orangine-home-carousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -33,6 +40,7 @@
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+            -->
         </div>
     </div>
 </div>

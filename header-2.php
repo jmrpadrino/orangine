@@ -33,14 +33,24 @@
                 background-size: cover;
             }
             .orangine-navbar{
-                background: #FF9800;
+                background: rgba(255,255,255,0.6);
+                background: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.6)), color-stop(100%, rgba(255,255,255,0)));
+                background: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+                background: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+                background: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+                background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+                position: fixed;
+                width: 100%;
+                top: 0;
             }
             .set-small.orangine-navbar{
                 position: fixed;
                 top:0;
                 z-index: 99999;
                 width: 100%;
-                background: rgba(255, 152, 0, 0.9);
+                background: #FF9800;
                 transition: background ease-in .2s;
             }
             .navbar{
@@ -55,7 +65,6 @@
                 padding-bottom: 6px;
                 padding-top: 6px;
                 background: none;
-                border-radius: 18px;
                 transition: background ease-in .2s;
             }
             .navbar-default .navbar-nav>li>a:hover{
@@ -63,9 +72,6 @@
             }
             .set-small .navbar-default .navbar-nav>li>a{
                 color: white;
-            }
-            .set-small .navbar-default .navbar-nav>li.active>a{
-                color: orange;
             }
             .navbar-nav>li>.dropdown-menu{
                 border-top-left-radius: 4px; 
@@ -78,14 +84,8 @@
                 position: absolute;
                 top: 5px;
             }
-            .navbar-default .navbar-nav>li.active:after{
-                display: none;
-            }
             .set-small .navbar-default .navbar-nav>li:after{
                 color: white;
-            }
-            .navbar-default .navbar-nav>li:last-child:after{
-                display: none;
             }
             /*.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
             color: white;
@@ -230,7 +230,7 @@
 
     <body <?php body_class(isset($class) ? $class : ''); ?>>
         <div class="orangine-wrapper">
-            <div class="orangine-navbar">
+            <div class="orangine-navbar navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-4">
