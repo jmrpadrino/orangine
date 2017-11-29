@@ -50,7 +50,8 @@
                 top:0;
                 z-index: 99999;
                 width: 100%;
-                background: #FF9800;
+                background-image: url(<?php echo get_template_directory_uri(); ?>/images/orangine-header-background.png);
+                background-position: center bottom;
                 transition: background ease-in .2s;
             }
             .navbar{
@@ -138,7 +139,7 @@
                 margin-top: 0px;
             }
             .orangine-logo-link img{
-                width: 150px;
+                max-width: 120px;
                 transition: all ease-in .5s;
             }
             .set-small .orangine-logo-link img{
@@ -192,6 +193,7 @@
                 overflow: hidden;
             }
             .home-product-container img{
+                width: 100%;
                 transform: scale(1);
                 transition: all ease-in .2s;
             }
@@ -233,7 +235,7 @@
             <div class="orangine-navbar navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-xs-5">
                             <div class="row">
                                 <div class="col-xs-4">
                                     <a class="navbar-brand orangine-logo-link pull-right" href="<?php echo home_url(); ?>">
@@ -248,7 +250,7 @@
                                 </div>
                             </div>    
                         </div>
-                        <div class="col-xs-8">
+                        <div class="col-xs-7">
                             <div class="row">
                                 <div class="col-xs-12 text-right">
                                     <div class="row">
