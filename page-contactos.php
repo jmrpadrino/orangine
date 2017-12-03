@@ -17,7 +17,10 @@
         </div>
     </div>
     <div class="row content-contact bottom">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-3">
+            <img src="<?= get_template_directory_uri(); ?>/images/orangine-call-center.png" alt="Orangine Call Center" class="img-responsive">
+        </div>
+        <div class="col-sm-9">
             <form id="contact-form" role="form" class="contact-form">
                 <div class="row">
                     <div class="col-sm-3 text-right">

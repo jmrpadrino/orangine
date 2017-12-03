@@ -140,6 +140,7 @@
             }
             .orangine-logo-link img{
                 max-width: 120px;
+                width: 100%;
                 transition: all ease-in .5s;
             }
             .set-small .orangine-logo-link img{
@@ -235,7 +236,7 @@
             <div class="orangine-navbar navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xs-5">
+                        <div class="col-xs-4">
                             <div class="row">
                                 <div class="col-xs-4">
                                     <a class="navbar-brand orangine-logo-link pull-right" href="<?php echo home_url(); ?>">
@@ -250,7 +251,7 @@
                                 </div>
                             </div>    
                         </div>
-                        <div class="col-xs-7">
+                        <div class="col-xs-8">
                             <div class="row">
                                 <div class="col-xs-12 text-right">
                                     <div class="row">

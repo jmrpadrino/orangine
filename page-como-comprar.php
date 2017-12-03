@@ -1,34 +1,42 @@
 <?php get_header(); the_post(); ?>
 <?php //echo the_title(); ?>
-<div class="container-fluid" style="background: #FF4E00; padding: 36px;">
+<div class="container-fluid" style="padding: 36px;">
+    <div class="row">
+        <div class="col-xs-12"></div>
+    </div>
     <div class="row">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="fleximage" style="display: flex;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-1.png" style="margin: auto;" class="img-responsive">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-1.png" style="margin: auto;" class="img-responsive" width="75%">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="fleximage" style="display: flex;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-2.png" style="margin: auto; margin-bottom: 36px;" class="img-responsive">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-2.png" style="margin: auto;" class="img-responsive"width="75%">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="fleximage" style="display: flex;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-3.png" style="margin: auto;" class="img-responsive">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-3.png" style="margin: auto;" class="img-responsive" width="75%">
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="fleximage" style="display: flex;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-4.png" style="margin: auto;" class="img-responsive">
+                <div class="col-sm-4">
+                    <div class="fleximage" style="display: flex; align-items: flex-start;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-4.png" style="margin: auto;" class="img-responsive" width="75%">
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="fleximage" style="display: flex; align-items: flex-start;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-5.png" style="margin: auto;" class="img-responsive" width="50%">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-5.png" style="margin: auto;" class="img-responsive" width="75%">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="fleximage" style="display: flex; align-items: flex-start;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/paso-6.png" style="margin: auto;" class="img-responsive" width="75%">
                     </div>
                 </div>
             </div>

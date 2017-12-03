@@ -45,6 +45,14 @@
                 border: none;
                 border-radius: 0px;
             }
+            .orangine-menu-items .dropdown-menu{
+                padding: 0px;
+            }
+            .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover{
+                color: white;
+                font-weight: bold;
+                background: #FF4E00;
+            }
             .navbar-default .navbar-nav>li>a{
                 color: white;
                 text-transform: uppercase;
@@ -54,10 +62,10 @@
                 transition: background ease-in .2s;
             }
             .navbar-nav>li>.dropdown-menu{
-                border-top-left-radius: 4px; 
-                border-top-right-radius: 4px; 
+                border-top-left-radius: 0px; 
+                border-top-right-radius: 0px; 
             }
-            .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+            /*.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
                 color: white;
                 background: rgba(42,64,149,1);
                 background: -moz-linear-gradient(left, rgba(42,64,149,1) 0%, rgba(255,76,3,1) 25%, rgba(255,76,3,1) 50%, rgba(255,76,3,1) 75%, rgba(42,64,149,1) 100%);
@@ -68,8 +76,13 @@
                 background: linear-gradient(to right, rgba(42,64,149,1) 0%, rgba(255,76,3,1) 25%, rgba(255,76,3,1) 50%, rgba(255,76,3,1) 75%, rgba(42,64,149,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4095', endColorstr='#2a4095', GradientType=1 );
                 box-shadow: 0px 0px 17px black;
+            }*/
+            .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+                color: #FF4E00;
+                font-weight: bold;
+                background: none;
             }
-			li.is-cart a,.home-grid-cart-icon{
+            li.is-cart a,.home-grid-cart-icon{
                 color: transparent!important;
                 width: 48px;
                 height: 48px;
@@ -82,13 +95,17 @@
             }
             li.is-cart a:hover, li.is-cart.active a,.home-grid-cart-icon{
                 box-shadow: none!important;
-			    color: transparent!important;
+                color: transparent!important;
             }
             .dropdown-menu li.active a, .dropdown-menu li:hover a{
                 background-color: #FF4E00;
             }
             .orangine-logo-link{
                 margin-top: 18px;
+                display: block;
+                min-height: 180px;
+                z-index: 999999999;
+                position: relative;
             }
             .contact-info{
                 margin-bottom: 36px;
@@ -102,6 +119,13 @@
                 height: 40px;
                 top: 44%;
                 width: 100%;
+                z-index: 99;
+            }
+            .orange-bar .social-icons li a{
+                font-size: 18px;
+                color: white;
+                display: inline-block;
+                margin-top: 7px;
             }
             .home-product-container{
                 position: relative;
@@ -136,59 +160,59 @@
 
     <body <?php body_class(isset($class) ? $class : ''); ?>>
         <div class="orangine-wrapper">
-        <div class="orangine-navbar">
-            <div class="orange-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 col-sm-offset-8 hidden-xs text-right">
-                            <ul class="list-inline">
-                                <li><a href="#"><span class="fa fa-search"></span></a></li>
-                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                <li><a href="#"><span class="fa fa-youtube"></span></a></li>
-                            </ul>
+            <div class="orangine-navbar">
+                <div class="orange-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-8 hidden-xs text-right">
+                                <ul class="list-inline social-icons">
+                                    <li><a href="#"><span class="fa fa-search"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <a class="navbar-brand orangine-logo-link" href="<?php echo home_url(); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Orangine Logo" title="Disfruta Orangine!" width="150">
-                        </a>    
-                    </div>
-                    <div class="col-xs-10">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="pull-right contact-info">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="80" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px;">
-                                    <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px;">Servicio al Cliente: <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px;">1800 008 008</span></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <a class="navbar-brand orangine-logo-link" href="<?php echo home_url(); ?>">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Orangine Logo" title="Disfruta Orangine!" width="150">
+                            </a>    
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="pull-right contact-info">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="80" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px;">
+                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px;">Servicio al Cliente: <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px;">1800 008 008</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <nav class="navbar navbar-default" role="navigation">
+                                        <!-- Brand and toggle get grouped for better mobile display -->
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Collect the nav links, forms, and other content for toggling -->
+                                        <div class="collapse navbar-collapse">
+                                            <?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
+                                        </div><!-- /.navbar-collapse -->
+                                    </nav>                  
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <nav class="navbar navbar-default" role="navigation">
-                                    <!-- Brand and toggle get grouped for better mobile display -->
-                                    <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
-                                    </div>
-
-                                    <!-- Collect the nav links, forms, and other content for toggling -->
-                                    <div class="collapse navbar-collapse">
-                                        <?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
-                                    </div><!-- /.navbar-collapse -->
-                                </nav>                  
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="main-container" class="orangine-master">
+            <div id="main-container" class="orangine-master">
