@@ -1,5 +1,5 @@
 <?php
-
+define('WOOCOMMERCE_USE_CSS', false);
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );

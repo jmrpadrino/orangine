@@ -1,9 +1,29 @@
 <?php get_header(); the_post(); ?>
 <?php //echo the_title(); ?>
-<div class="container-fluid" style="padding: 36px;">
+<style>
+    .skew-border{
+        height: 80px;
+        background-color: #E55100;
+    }
+    .skew-border:after{
+        display: inline-block;
+        content:' ';
+        height: 80px;
+        width: 80px;
+        border-top: 80px solid #E55100;
+	    border-right: 80px solid transparent;
+        position: absolute;
+        right: -80px;
+        top 0;
+    }
+</style>
+<div class="container-fluid nopadding">
     <div class="row">
-        <div class="col-xs-12"></div>
+        <div class="col-xs-8 skew-border">algo</div>
+        <div class="col-xs-3 col-xs-offset-1"><img src="<?= get_template_directory_uri(); ?>/images/aapstore-androide.png" class="pull-left img-responsive"></div>
     </div>
+</div>
+<div class="container-fluid">
     <div class="row">
         <div class="container">
             <div class="row">

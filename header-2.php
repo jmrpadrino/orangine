@@ -12,6 +12,20 @@
                 font-family: 'Arial', sans-serif;
                 overflow: hidden;
             }
+            footer{
+                background-image: url(<?php echo get_template_directory_uri(); ?>/images/orangine-header-background.png);
+                background-position: center bottom;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+            footer h3{
+                font-size: 18px;
+                margin: 12px 0;
+            }
+            footer .footer-column-container{
+                padding-top:36px;
+            }
             .orangine-wrapper{
                 opacity: 0;
             }
