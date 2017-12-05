@@ -4,6 +4,9 @@
     .skew-border{
         height: 80px;
         background-color: #E55100;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
     }
     .skew-border:after{
         display: inline-block;
@@ -14,12 +17,24 @@
 	    border-right: 80px solid transparent;
         position: absolute;
         right: -80px;
-        top 0;
+        top: 0;
     }
 </style>
 <div class="container-fluid nopadding">
     <div class="row">
-        <div class="col-xs-8 skew-border">algo</div>
+        <div class="col-xs-8 skew-border">
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>Compra en &iacute;nea</p>
+                    <p>www.orangine.com.ec</p>
+                </div>
+                <div class="col-xs-3">
+                    <img class="pull-right" src="<?= get_template_directory_uri(); ?>/images/APP.png" alt="Descarga el App de Orangine" width="60" style="margin-top: 10px;">
+                    <p>Descarga</p>
+                    <p>Nuestra</p>
+                </div>
+            </div>
+        </div>
         <div class="col-xs-3 col-xs-offset-1"><img src="<?= get_template_directory_uri(); ?>/images/aapstore-androide.png" class="pull-left img-responsive"></div>
     </div>
 </div>

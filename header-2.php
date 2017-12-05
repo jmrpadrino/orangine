@@ -259,8 +259,9 @@
                                 </div>
                                 <div class="col-xs-8">
                                     <div class="contact-info">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="60" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px; margin-top: 20px;">
-                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; line-height: 1;">1800 008 008</span><br />Servicio al Cliente</span>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="60" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px; margin-top: 40px;">
+                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; line-height: 1;">1800 008 008</span><br />Servicio a domicilio</span>
+                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 9px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; line-height: 1;">02 2628 871</span><br />Te&eacute;fono</span>
                                     </div>
                                 </div>
                             </div>    

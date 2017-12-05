@@ -79,7 +79,7 @@
                 border-top-left-radius: 0px; 
                 border-top-right-radius: 0px; 
             }
-            /*.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+            .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
                 color: white;
                 background: rgba(42,64,149,1);
                 background: -moz-linear-gradient(left, rgba(42,64,149,1) 0%, rgba(255,76,3,1) 25%, rgba(255,76,3,1) 50%, rgba(255,76,3,1) 75%, rgba(42,64,149,1) 100%);
@@ -90,12 +90,12 @@
                 background: linear-gradient(to right, rgba(42,64,149,1) 0%, rgba(255,76,3,1) 25%, rgba(255,76,3,1) 50%, rgba(255,76,3,1) 75%, rgba(42,64,149,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4095', endColorstr='#2a4095', GradientType=1 );
                 box-shadow: 0px 0px 17px black;
-            }*/
-            .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+            }
+            /*.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
                 color: #FF4E00;
                 font-weight: bold;
                 background: none;
-            }
+            }*/
             li.is-cart a,.home-grid-cart-icon{
                 color: transparent!important;
                 width: 48px;
@@ -207,7 +207,9 @@
                                 <div class="col-xs-12">
                                     <div class="pull-right contact-info">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="80" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px;">
-                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px;">Servicio al Cliente: <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px;">1800 008 008</span></span>
+                                        <span class="servicio-al-cliente-texto text-right" style="float: left; text-transform: uppercase; margin-top: 18px;">Servicio a domicilio: <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px;">1800 008 008</span></span>
+                                        <br />
+                                        <span class="servicio-al-cliente-texto text-right" style="float: left; text-transform: uppercase;">Tel&eacute;fono: <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px;">02 2628 871</span></span>
                                     </div>
                                 </div>
                             </div>
