@@ -114,6 +114,28 @@
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4095', endColorstr='#2a4095', GradientType=1 );
             box-shadow: 0px 0px 17px black;
             }*/
+            .orangine-menu-items .dropdown-menu{
+                padding: 0px;
+            }
+            .navbar-nav>li>.dropdown-menu{
+                border-top-left-radius: 0px; 
+                border-top-right-radius: 0px; 
+            }
+            ul.dropdown-menu{
+                margin-top: 20px!important;
+            }
+            ul.dropdown-menu:before {
+                display: block;
+                content: " ";
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 20px solid white;
+                position: absolute;
+                top: -20px;
+                left: calc(50% - 10px);
+            }
             li.is-cart a,.home-grid-cart-icon{
                 color: transparent!important;
                 width: 48px;
@@ -300,7 +322,16 @@
 
                                         <!-- Collect the nav links, forms, and other content for toggling -->
                                         <div class="collapse navbar-collapse">
-                                            <?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
+                                            <?php 
+                                                wp_nav_menu( array(
+                                                    'menu' => 'Main', 
+                                                    'depth'=> 3, 
+                                                    'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 
+                                                    'container' => '', 
+                                                    'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                                                    'walker' => new wp_bootstrap_navwalker()
+                                                )); 
+                                            ?>
                                         </div><!-- /.navbar-collapse -->
                                     </nav>                  
                                 </div>

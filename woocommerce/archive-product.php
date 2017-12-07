@@ -32,7 +32,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
+    <div class="container">
     <header class="woocommerce-products-header">
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -52,6 +52,7 @@ get_header( 'shop' ); ?>
 		?>
 
     </header>
+    
 
 		<?php if ( have_posts() ) : ?>
 
@@ -108,7 +109,7 @@ get_header( 'shop' ); ?>
 			?>
 
 		<?php endif; ?>
-
+    
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
@@ -117,14 +118,14 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
+    </div>
 	<?php
 		/**
 		 * woocommerce_sidebar hook.
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
-		do_action( 'woocommerce_sidebar' );
+		//do_action( 'woocommerce_sidebar' );
 	?>
 
 <?php get_footer( 'shop' ); ?>

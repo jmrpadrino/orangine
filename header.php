@@ -92,10 +92,25 @@
                 box-shadow: 0px 0px 17px black;
             }
             /*.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-                color: #FF4E00;
-                font-weight: bold;
-                background: none;
+            color: #FF4E00;
+            font-weight: bold;
+            background: none;
             }*/
+            ul.dropdown-menu{
+                margin-top: 20px!important;
+            }
+            ul.dropdown-menu:before {
+                display: block;
+                content: " ";
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 20px solid white;
+                position: absolute;
+                top: -20px;
+                left: calc(50% - 10px);
+            }
             li.is-cart a,.home-grid-cart-icon{
                 color: transparent!important;
                 width: 48px;
@@ -170,7 +185,10 @@
                 margin-bottom: 36px;
             }
             .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary{
-                float: left;
+                width: 100%;
+            }
+            .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images{
+                width: 100%;
             }
             .onsale{
                 display:none;
@@ -227,7 +245,7 @@
 
                                         <!-- Collect the nav links, forms, and other content for toggling -->
                                         <div class="collapse navbar-collapse">
-                                            <?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 3, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
+                                            <?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 4, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
                                         </div><!-- /.navbar-collapse -->
                                     </nav>                  
                                 </div>
