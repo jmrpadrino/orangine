@@ -8,8 +8,16 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <?php wp_head(); ?>
         <style>
+            @font-face {
+                font-family: vagRounded;
+                src: url(<?php echo get_template_directory_uri(); ?>/fonts/VAGRoundedStd-Thin.otf);
+            }
+            @font-face {
+                font-family: Orator;
+                src: url(<?php echo get_template_directory_uri(); ?>/fonts/OratorStd.otf);
+            }
             body{
-                font-family: 'Arial', sans-serif;
+                font-family: 'vagRounded', sans-serif;
                 overflow: hidden;
             }
             footer{
@@ -58,6 +66,8 @@
                 position: fixed;
                 width: 100%;
                 top: 0;
+                font-family: 'Orator', sans-serif;
+                text-transform: uppercase;
             }
             .set-small.orangine-navbar{
                 position: fixed;
@@ -114,6 +124,16 @@
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4095', endColorstr='#2a4095', GradientType=1 );
             box-shadow: 0px 0px 17px black;
             }*/
+            /* Add the following to your stylesheet */
+/*
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:active>.dropdown-menu, .dropdown-submenu:hover>.dropdown-menu {
+display: block;
+}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:active>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}*/
             .orangine-menu-items .dropdown-menu{
                 padding: 0px;
             }
@@ -146,6 +166,9 @@
                 background-size: contain!important;
                 margin-top: -10px;
                 margin-left: 16px;
+            }
+            .home-grid-cart-icon.cart-icon-tower{
+                
             }
             li.is-cart a:hover, li.is-cart.active a,.home-grid-cart-icon{
                 box-shadow: none!important;
@@ -237,10 +260,24 @@
             .home-product-container:hover img{
                 transform: scale(1.2);
             }
-            .home-grid-cart-icon{
+            .home-grid-cart-icon.left{
                 position: absolute;
-                bottom: 40px;
-                right: 40px;
+                bottom: 20px;
+                right: 20px;
+                width: 42px;
+                height: 42px;
+            }
+            .home-grid-cart-icon.right{
+                position: absolute;
+                bottom: 20px;
+                left: 10px;
+                width: 42px;
+                height: 42px;
+            }
+            .home-grid-cart-icon.cart-icon-tower{
+                position: absolute;
+                top: 20px;
+                right: 20px;
                 width: 42px;
                 height: 42px;
             }
@@ -282,8 +319,8 @@
                                 <div class="col-xs-8">
                                     <div class="contact-info">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="60" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px; margin-top: 40px;">
-                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; line-height: 1;">1800 008 008</span><br />Servicio a domicilio</span>
-                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 9px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; line-height: 1;">02 2628 871</span><br />Te&eacute;fono</span>
+                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 22px; line-height: 1;">1800 008 008</span><br />Servicio a domicilio</span>
+                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 9px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 22px; line-height: 1;">02 2628 871</span><br />Te&eacute;fono</span>
                                     </div>
                                 </div>
                             </div>    
@@ -324,13 +361,13 @@
                                         <div class="collapse navbar-collapse">
                                             <?php 
                                                 wp_nav_menu( array(
-                                                    'menu' => 'Main', 
+                                                    'theme_location' => 'main_menu',
                                                     'depth'=> 3, 
                                                     'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 
                                                     'container' => '', 
-                                                    'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-                                                    'walker' => new wp_bootstrap_navwalker()
-                                                )); 
+                                                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                                    'walker'            => new WP_Bootstrap_Navwalker(),
+                                                ));
                                             ?>
                                         </div><!-- /.navbar-collapse -->
                                     </nav>                  

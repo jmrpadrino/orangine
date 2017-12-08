@@ -63,7 +63,7 @@
                     //echo $las_categorias[0]->term_id;
                 ?>
                 <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[0]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[0]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[0]->ID); ?>"><span class="home-grid-cart-icon left">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -73,7 +73,7 @@
                     //var_dump($las_categorias);
                 ?>
                 <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[1]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[1]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[1]->ID); ?>"><span class="home-grid-cart-icon left">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -83,7 +83,7 @@
                     //var_dump($las_categorias);
                 ?>
                 <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[2]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[2]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[2]->ID); ?>"><span class="home-grid-cart-icon left">Ca</span></a>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
                     //var_dump($las_categorias);
                 ?>
                 <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[3]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[3]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[3]->ID); ?>"><span class="home-grid-cart-icon cart-icon-tower">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -112,7 +112,7 @@
                     //var_dump($las_categorias);
                 ?>
                 <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[4]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[4]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[4]->ID); ?>"><span class="home-grid-cart-icon right">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -122,7 +122,7 @@
                     //var_dump($las_categorias);
                 ?>
                 <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[5]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[5]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[5]->ID); ?>"><span class="home-grid-cart-icon right">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -132,7 +132,7 @@
                     //var_dump($las_categorias);
                 ?>
                 <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[6]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[6]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[6]->ID); ?>"><span class="home-grid-cart-icon right">Ca</span></a>
             </div>
         </div>
     </div>

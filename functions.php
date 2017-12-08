@@ -1,5 +1,5 @@
 <?php
-require_once('includes/wp_bootstrap_navwalker.php');
+require_once('includes/wp-bootstrap-navwalker.php');
 
 define('WOOCOMMERCE_USE_CSS', false);
 
@@ -51,11 +51,7 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 
 	function bootstrap_setup(){
 
-		add_action( 'init', 'register_menu' );
-
-		function register_menu(){
-			register_nav_menu( 'top-bar', 'Bootstrap Top Menu' ); 
-		}
+		
 
 		class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
 
