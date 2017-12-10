@@ -52,6 +52,7 @@
         'posts_per_page' => 7,
     );
     $productos = get_posts($args);
+    if (count($productos) > 0){
     
 ?>
 <div class="row">
@@ -137,4 +138,4 @@
         </div>
     </div>
 </div>
-<?php get_footer(); ?>
+<?php } get_footer(); ?>

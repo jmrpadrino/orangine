@@ -193,6 +193,44 @@
             .onsale{
                 display:none;
             }
+            .orangine-single-summary{
+                background: #F2F0F0;
+                border: 1px solid #DDDCDC;
+                border-radius: 10px;
+                padding: 12px 18px;
+            }
+            .product_title{
+                color: #005A9E;
+                font-size: 24px;
+                text-align: center;
+            }
+            .summary-hr{
+                border-top: 2px solid #E5E2E2;
+                border-bottom: 1px solid white;
+                margin-bottom: 5px;
+                margin-top: 5px;    
+            }
+            .woocommerce div.product form.cart .variations{
+                margin-bottom: 0px;
+            }
+            .woocommerce div.product form.cart .variations label{
+                color: black;
+            }
+            .woocommerce div.product form.cart .variations select{
+                float: right;
+                margin-right: 0px;
+            }
+            .woocommerce .quantity .qty{
+                border-radius: 4px;
+                border: inset 1px;
+            }
+            .woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover{
+                background-color: #E55100;
+                color: white;
+            }
+            .woocommerce div.product form.cart{
+                margin: 0px;
+            }
         </style>
     </head>
 
@@ -245,7 +283,19 @@
 
                                         <!-- Collect the nav links, forms, and other content for toggling -->
                                         <div class="collapse navbar-collapse">
-                                            <?php wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 4, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu)); ?>
+                                            <?php 
+                                                //wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 4, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu));
+                                            wp_nav_menu( array(
+                                                'theme_location'    => 'main_menu',
+                                                'depth'             => 2,
+                                                'container'         => 'div',
+                                                'container_class'   => 'collapse navbar-collapse',
+                                                'container_id'      => 'bs-example-navbar-collapse-1',
+                                                'menu_class'        => 'nav navbar-nav navbar-right orangine-menu-items',
+                                                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                                'walker'            => new WP_Bootstrap_Navwalker(),
+                                            ) );
+                                            ?>
                                         </div><!-- /.navbar-collapse -->
                                     </nav>                  
                                 </div>

@@ -53,7 +53,7 @@ if ( post_password_required() ) {
         </div>
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
-                <div class="summary entry-summary">
+                <div class="summary entry-summary orangine-single-summary">
 
                     <?php
                     /**

@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php foreach ( $attributes as $attribute ) : ?>
 		<tr>
 			<th><?php echo wc_attribute_label( $attribute->get_name() ); ?></th>
-			<td><?php
+			<!--td><?php
 				$values = array();
 
 				if ( $attribute->is_taxonomy() ) {
@@ -65,7 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 
 				echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-			?></td>
+			?--></td>
 		</tr>
 	<?php endforeach; ?>
 </table>
