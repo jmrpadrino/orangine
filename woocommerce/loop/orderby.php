@@ -1,4 +1,5 @@
 <?php
+return;
 /**
  * Show options for ordering
  *

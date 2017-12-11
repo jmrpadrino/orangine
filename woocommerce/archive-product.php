@@ -81,8 +81,9 @@ get_header( 'shop' ); ?>
 						 */
 						do_action( 'woocommerce_shop_loop' );
 					?>
-
+					<div class="col-sm-6 orangine-archive-single-product">
 					<?php wc_get_template_part( 'content', 'product' ); ?>
+					</div>
 
 				<?php endwhile; // end of the loop. ?>
 

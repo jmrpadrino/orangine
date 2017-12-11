@@ -199,9 +199,9 @@
                 border-radius: 10px;
                 padding: 12px 18px;
             }
-            .product_title{
+            .product_title,.woocommerce-loop-product__title{
                 color: #005A9E;
-                font-size: 24px;
+                font-size: 24px!important;
                 text-align: center;
             }
             .summary-hr{
@@ -228,8 +228,24 @@
                 background-color: #E55100;
                 color: white;
             }
+            .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .single_add_to_cart_button.button.alt{
+                background-color: #E55100;
+                color: white;
+            }
             .woocommerce div.product form.cart{
                 margin: 0px;
+            }
+            .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+                float: none;
+                width: 100%;
+                margin: 0px;
+            }
+            .orangine-archive-single-product{
+                padding: 0 60px;
+                margin-bottom: 48px;
+            }
+            .orangine-archive-single-product:nth-child(odd){
+                border-right: 1px solid #b7b7b7;
             }
         </style>
     </head>
