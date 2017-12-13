@@ -75,4 +75,22 @@
         </div>
     </div>
 </div>
+<div id="gmap" style="height: 350px;"></div>
+<script type="text/javascript">
+    function initMap(){
+        var map = new google.maps.Map(document.getElementById('gmap'), {
+            zoom: 16,
+            //styles: styles,
+            center: { lat: -0.284611, lng:-78.559208},
+            mapTypeId: 'roadmap'
+        });
+        var marker = new google.maps.Marker({
+            //icon: 'https://www.gogalapagos.com/cnt/themes/galapagos/images/air_plane_icon.png',
+            position: { lat: -0.284611, lng:-78.559208},
+            map: map,
+            title: 'Orangine'
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGds9FjlnAoR3dpbkG7iH-c7CYoYWHk1o&callback=initMap"></script>
 <?php get_footer(); ?>

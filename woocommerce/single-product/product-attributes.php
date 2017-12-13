@@ -65,7 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 
 				echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-			?--></td>
+			?></td-->
 		</tr>
 	<?php endforeach; ?>
 </table>

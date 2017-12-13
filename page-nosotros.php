@@ -1,6 +1,6 @@
 <?php get_header(); the_post(); $prefix = 'orangine__'; ?>
 <?php //echo the_title(); ?>
-<div class="container" style="margin: 36px 0;">
+<div class="container" style="margin-top: 36px; margin-bottom: 36px;">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="row">

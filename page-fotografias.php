@@ -18,8 +18,9 @@
     <div class="row">
         <?php foreach( $query_images->posts as $image ) { ?>
         <div class="col-sm-4">
-            <div class="image-frame" style="min-height: 300px; overflow: hidden;">
-                <img src="<?php echo wp_get_attachment_url( $image->ID ) ?>" alt="Oragine Galeria" class="img-responsive" style="position: absolute; top:50%; left: 50%; transform: translateX(-50%) translateY(-50%);">
+            <div class="image-frame" style="margin: 36px; overflow: hidden;">
+                <?php $image = wp_get_attachment_image_src( $image->ID, 'thumbnail' ); ?>
+                <img class="img-responsive" src="<?php echo $image[0]; ?>" alt="Oragine Galeria" style="margin: 0 auto;">
             </div>
         </div>
         <?php } ?>

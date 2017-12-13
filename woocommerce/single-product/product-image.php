@@ -19,10 +19,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 global $post, $product;
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
-$thumbnail_size    = apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' );
+$thumbnail_size    = apply_filters( 'woocommerce_product_thumbnails_large_size', 'large' );
 $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
 $full_size_image   = wp_get_attachment_image_src( $post_thumbnail_id, $thumbnail_size );
 $placeholder       = has_post_thumbnail() ? 'with-images' : 'without-images';
@@ -33,7 +32,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out; margin-top: 72px;">
+<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out; margin-top: 12px;">
 	<figure class="woocommerce-product-gallery__wrapper img-responsive">
 		<?php
 		$attributes = array(
@@ -47,8 +46,8 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 		);
 
 		if ( has_post_thumbnail() ) {
-			$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'medium' ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_size_image[0] ) . '">';
-			$html .= get_the_post_thumbnail( $post->ID, 'shop_single', $attributes );
+			$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'large' ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_size_image[0] ) . '">';
+			$html .= get_the_post_thumbnail( $post->ID, 'large', $attributes );
 			$html .= '</a></div>';
 		} else {
 			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';

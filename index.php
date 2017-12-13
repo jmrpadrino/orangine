@@ -47,13 +47,26 @@
 <?php } //fin si hay slides para el carousel ?>
 <?php 
     //obtener los productos de woocommerce
-    $args = array(
+    /*$args = array(
         'post_type' => 'product',
         'posts_per_page' => 7,
-    );
+        'meta_query' => array(
+            'key'   => '_featured',
+            'value' => 'yes'
+        )
+    );*/
+$args = array(
+    'post_type'   =>  'product',    
+    'posts_per_page'   =>  7,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'product_visibility',
+            'field'    => 'name',
+            'terms'    => 'featured',
+        ),
+    ),
+);
     $productos = get_posts($args);
-    if (count($productos) > 0){
-    
 ?>
 <div class="row">
     <div class="col-sm-4">
@@ -63,8 +76,8 @@
                     $las_categorias = get_the_terms( $productos[0]->ID,  'product_cat');
                     //echo $las_categorias[0]->term_id;
                 ?>
-                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[0]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[0]->ID); ?>"><span class="home-grid-cart-icon left">Ca</span></a>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_post_meta( $productos[0]->ID, 'orangine_frontpage_image', true ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[0]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -73,8 +86,8 @@
                     $las_categorias = get_the_terms( $productos[1]->ID,  'product_cat');
                     //var_dump($las_categorias);
                 ?>
-                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[1]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[1]->ID); ?>"><span class="home-grid-cart-icon left">Ca</span></a>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_post_meta( $productos[1]->ID, 'orangine_frontpage_image', true ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[1]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -83,8 +96,8 @@
                     $las_categorias = get_the_terms( $productos[2]->ID,  'product_cat');
                     //var_dump($las_categorias);
                 ?>
-                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[2]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[2]->ID); ?>"><span class="home-grid-cart-icon left">Ca</span></a>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_post_meta( $productos[2]->ID, 'orangine_frontpage_image', true ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[2]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
     </div>
@@ -95,8 +108,8 @@
                     $las_categorias = get_the_terms( $productos[3]->ID,  'product_cat');
                     //var_dump($las_categorias);
                 ?>
-                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[3]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[3]->ID); ?>"><span class="home-grid-cart-icon cart-icon-tower">Ca</span></a>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_post_meta( $productos[3]->ID, 'orangine_frontpage_image', true ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[3]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -112,8 +125,8 @@
                     $las_categorias = get_the_terms( $productos[4]->ID,  'product_cat');
                     //var_dump($las_categorias);
                 ?>
-                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[4]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[4]->ID); ?>"><span class="home-grid-cart-icon right">Ca</span></a>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_post_meta( $productos[4]->ID, 'orangine_frontpage_image', true ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[4]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -122,8 +135,8 @@
                     $las_categorias = get_the_terms( $productos[5]->ID,  'product_cat');
                     //var_dump($las_categorias);
                 ?>
-                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[5]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[5]->ID); ?>"><span class="home-grid-cart-icon right">Ca</span></a>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_post_meta( $productos[5]->ID, 'orangine_frontpage_image', true ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[5]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
         <div class="row">
@@ -132,10 +145,10 @@
                     $las_categorias = get_the_terms( $productos[6]->ID,  'product_cat');
                     //var_dump($las_categorias);
                 ?>
-                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_the_post_thumbnail_url( $productos[6]->ID, 'medium' ); ?>" class="img-responsive" height="600" width="600"></a>
-                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[6]->ID); ?>"><span class="home-grid-cart-icon right">Ca</span></a>
+                <a href="<?php echo get_term_link($las_categorias[0]->term_id, 'product_cat'); ?>"><img src="<?php echo get_post_meta( $productos[6]->ID, 'orangine_frontpage_image', true ); ?>" class="img-responsive" height="600" width="600"></a>
+                <a href="<?php echo home_url('carrito/?add-to-cart=' . $productos[6]->ID); ?>"><span class="home-grid-cart-icon">Ca</span></a>
             </div>
         </div>
     </div>
 </div>
-<?php } get_footer(); ?>
+<?php get_footer(); ?>

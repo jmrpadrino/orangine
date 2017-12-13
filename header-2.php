@@ -66,8 +66,6 @@
                 position: fixed;
                 width: 100%;
                 top: 0;
-                font-family: 'Orator', sans-serif;
-                text-transform: uppercase;
             }
             .set-small.orangine-navbar{
                 position: fixed;
@@ -99,8 +97,15 @@
                 color: white;
             }
             .navbar-nav>li>.dropdown-menu{
-                border-top-left-radius: 4px; 
-                border-top-right-radius: 4px; 
+                border-top-left-radius: 0px; 
+                border-top-right-radius: 0px; 
+                padding: 0 0;
+            }
+            .navbar-nav>li>.dropdown-menu>li>.dropdown-menu{
+                transform: translateX(150px) translateY(-20px);
+                border-top-left-radius: 0px; 
+                border-top-right-radius: 0px; 
+                padding: 0 0;
             }
             .navbar-default .navbar-nav>li:after{
                 content: '|';
@@ -124,37 +129,6 @@
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4095', endColorstr='#2a4095', GradientType=1 );
             box-shadow: 0px 0px 17px black;
             }*/
-            /* Add the following to your stylesheet */
-            /*
-            .dropdown-submenu{position:relative;}
-            .dropdown-submenu>.dropdown-menu{top:0;left:100%;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
-            .dropdown-submenu:active>.dropdown-menu, .dropdown-submenu:hover>.dropdown-menu {
-            display: block;
-            }
-            .dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
-            .dropdown-submenu:active>a:after{border-left-color:#ffffff;}
-            .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}*/
-            .orangine-menu-items .dropdown-menu{
-                padding: 0px;
-            }
-            .no-active a, .no-active a.active{
-                background: none;
-            }
-            ul.dropdown-menu{
-                margin-top: 20px!important;
-            }
-            ul.dropdown-menu:before {
-                display: block;
-                content: " ";
-                width: 0;
-                height: 0;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                border-bottom: 20px solid white;
-                position: absolute;
-                top: -20px;
-                left: calc(50% - 10px);
-            }
             li.is-cart a,.home-grid-cart-icon{
                 color: transparent!important;
                 width: 48px;
@@ -256,24 +230,10 @@
             .home-product-container:hover img{
                 transform: scale(1.2);
             }
-            .home-grid-cart-icon.left{
+            .home-grid-cart-icon{
                 position: absolute;
-                bottom: 20px;
-                right: 20px;
-                width: 42px;
-                height: 42px;
-            }
-            .home-grid-cart-icon.right{
-                position: absolute;
-                bottom: 20px;
-                left: 10px;
-                width: 42px;
-                height: 42px;
-            }
-            .home-grid-cart-icon.cart-icon-tower{
-                position: absolute;
-                top: 20px;
-                right: 20px;
+                bottom: 40px;
+                right: 40px;
                 width: 42px;
                 height: 42px;
             }
@@ -297,12 +257,6 @@
                 background-attachment: fixed;
                 height: 100vh;
             }
-            li.menu-item-has-children ul.sub-menu{
-                display:none;
-            }
-            li.menu-item-has-children:hover ul.sub-menu {
-                display:block;
-            }
         </style>
     </head>
 
@@ -321,8 +275,8 @@
                                 <div class="col-xs-8">
                                     <div class="contact-info">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="60" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px; margin-top: 40px;">
-                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 22px; line-height: 1;">1800 008 008</span><br />Servicio a domicilio</span>
-                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 9px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 22px; line-height: 1;">02 2628 871</span><br />Tel&eacute;fono</span>
+                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 18px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; line-height: 1;">1800 008 008</span><br />Servicio a domicilio</span>
+                                        <span class="servicio-al-cliente-texto" style="float: left; text-transform: uppercase; margin-top: 9px; color: white; font-size: 12px;"><span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; line-height: 1;">02 2628 871</span><br />Te&eacute;fono</span>
                                     </div>
                                 </div>
                             </div>    
@@ -360,17 +314,17 @@
                                         </div>
 
                                         <!-- Collect the nav links, forms, and other content for toggling -->
-                                        
+                                        <div class="collapse navbar-collapse">
                                             <?php 
-                                            /*wp_nav_menu( array(
-                                                    'theme_location' => 'main_menu',
-                                                    'depth'=> 3, 
-                                                    'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 
-                                                    'container' => 'orangine-main-menu', 
+                                                /*wp_nav_menu( array(
+                                                    'menu' => 'Main', 
+                                                    'menu_class' => 'nav navbar-nav navbar-right orangine-menu-items', 
+                                                    'depth'=> 4, 
+                                                    'container'=> false, 
                                                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                                                     'walker'            => new WP_Bootstrap_Navwalker(),
-                                                ));*/
-                                            wp_nav_menu( array(
+                                                )); */
+                                                wp_nav_menu( array(
                                                 'theme_location'    => 'main_menu',
                                                 'depth'             => 4,
                                                 'container'         => 'div',
@@ -381,7 +335,7 @@
                                                 'walker'            => new WP_Bootstrap_Navwalker(),
                                             ) );
                                             ?>
-                                        
+                                        </div><!-- /.navbar-collapse -->
                                     </nav>                  
                                 </div>
                             </div>

@@ -8,8 +8,16 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <?php wp_head(); ?>
         <style>
+            @font-face {
+                font-family: vagRounded;
+                src: url(<?php echo get_template_directory_uri(); ?>/fonts/VAGRoundedStd-Thin.otf);
+            }
+            @font-face {
+                font-family: Orator;
+                src: url(<?php echo get_template_directory_uri(); ?>/fonts/OratorStd.otf);
+            }
             body{
-                font-family: 'Arial', sans-serif;
+                font-family: 'vagRounded', sans-serif;
                 overflow: hidden;
             }
             footer{
@@ -90,6 +98,8 @@
                 background: linear-gradient(to right, rgba(42,64,149,1) 0%, rgba(255,76,3,1) 25%, rgba(255,76,3,1) 50%, rgba(255,76,3,1) 75%, rgba(42,64,149,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a4095', endColorstr='#2a4095', GradientType=1 );
                 box-shadow: 0px 0px 17px black;
+                font-family: 'Orator', sans-serif;
+                text-transform: uppercase;
             }
             /*.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
             color: #FF4E00;
@@ -110,6 +120,12 @@
                 position: absolute;
                 top: -20px;
                 left: calc(50% - 10px);
+            }
+            .navbar-nav>li>.dropdown-menu>li>.dropdown-menu{
+                transform: translateX(150px) translateY(-20px);
+                border-top-left-radius: 0px; 
+                border-top-right-radius: 0px; 
+                padding: 0 0;
             }
             li.is-cart a,.home-grid-cart-icon{
                 color: transparent!important;
@@ -198,6 +214,7 @@
                 border: 1px solid #DDDCDC;
                 border-radius: 10px;
                 padding: 12px 18px;
+                margin-top: 72px;
             }
             .product_title,.woocommerce-loop-product__title{
                 color: #005A9E;
@@ -243,9 +260,32 @@
             .orangine-archive-single-product{
                 padding: 0 60px;
                 margin-bottom: 48px;
+                border-right: 1px solid #cccccc;
             }
-            .orangine-archive-single-product:nth-child(odd){
-                border-right: 1px solid #b7b7b7;
+            .woocommerce div.product div.images img, .orangine-archive-single-product img{
+                max-height: 450px;
+                width: auto!important;
+                margin: 0 auto!important;                
+            }
+            .woocommerce-message{
+                max-width: 90%;
+                margin: auto;
+                margin-top: 36px;
+                border-top-color: #ff4e00;
+                box-shadow: 0px 13px 17px rgba(128, 128, 128, 0.45);
+            }
+            .woocommerce-message::before{
+                color: #ff4e00;
+            }
+            .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
+                background-color: #ff4e00;
+            }
+            .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{
+                background-color: #c93d00;
+            }
+            .woocommerce{
+                padding-top: 36px;
+                padding-bottom: 36px;
             }
         </style>
     </head>
@@ -267,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-2">
                             <a class="navbar-brand orangine-logo-link" href="<?php echo home_url(); ?>">
@@ -276,12 +316,27 @@
                         </div>
                         <div class="col-xs-10">
                             <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="pull-right contact-info">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="80" alt="Telefono Oralgine" style="float:left; margin: 10px auto; margin-right: 18px;">
-                                        <span class="servicio-al-cliente-texto text-right" style="float: left; text-transform: uppercase; margin-top: 18px;">Servicio a domicilio: <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px;">1800 008 008</span></span>
-                                        <br />
-                                        <span class="servicio-al-cliente-texto text-right" style="float: left; text-transform: uppercase;">Tel&eacute;fono: <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px;">02 2628 871</span></span>
+                                <div class="col-xs-7">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/call-center.png" width="80" alt="Telefono Oralgine" style="margin: 10px auto; margin-right: 18px;" class="pull-right">
+                                </div>
+                                <div class="col-xs-5">
+                                    <div class="contact-info">
+                                        <div class="row">
+                                            <div class="col-xs-5 text-right">
+                                                <span class="servicio-al-cliente-texto" style="text-transform: uppercase; margin-top: 18px; display: block;">Servicio a domicilio:</span>
+                                            </div>
+                                            <div class="col-xs-7">
+                                                <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; display: block; margin-top: 6px;">1800 008 008</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-5 text-right">
+                                                <span class="servicio-al-cliente-texto" style="text-transform: uppercase; margin-top: 18px; display: block;">Tel&eacute;fono:</span>
+                                            </div>
+                                            <div class="col-xs-7">
+                                                <span class="telefono-oralgine" style="text-transform: uppercase; font-size: 28px; display: block; margin-top: 6px;">02 2628 871</span>
+                                            </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>
@@ -300,10 +355,10 @@
                                         <!-- Collect the nav links, forms, and other content for toggling -->
                                         <div class="collapse navbar-collapse">
                                             <?php 
-                                                //wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 4, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu));
+                                            //wp_nav_menu( array('menu' => 'Main', 'menu_class' => 'nav navbar-nav navbar-right pull-right orangine-menu-items', 'depth'=> 4, 'container'=> false, 'walker'=> new Bootstrap_Walker_Nav_Menu));
                                             wp_nav_menu( array(
-                                                'theme_location'    => 'main_menu',
-                                                'depth'             => 2,
+                                                'theme_location'    => 'inner_menu',
+                                                'depth'             => 4,
                                                 'container'         => 'div',
                                                 'container_class'   => 'collapse navbar-collapse',
                                                 'container_id'      => 'bs-example-navbar-collapse-1',

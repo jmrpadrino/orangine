@@ -17,7 +17,8 @@ if ( ! isset( $content_width ) ) {
 if ( function_exists( 'register_nav_menus' ) ) {
   	register_nav_menus(
   		array(
-  		  'main_menu' => 'Main Menu'
+  		    'main_menu' => 'Main Menu',
+            'inner_menu' => 'Internas Menu'
   		)
   	);
 }
@@ -501,10 +502,10 @@ function orangine_register_meta_boxes( $meta_box ) {
 }
 add_action( 'woocommerce_checkout_process', 'wc_minimum_order_amount' );
 add_action( 'woocommerce_before_cart' , 'wc_minimum_order_amount' );
- 
+
 function wc_minimum_order_amount() {
     // Set this variable to specify a minimum order value
-    $minimum = 6;
+    $minimum = 1;
 
     if ( WC()->cart->total < $minimum ) {
 
@@ -530,5 +531,8 @@ function wc_minimum_order_amount() {
     }
 
 }
+
 add_filter( 'woocommerce_get_breadcrumb', '__return_false' );
+
+
 ?>

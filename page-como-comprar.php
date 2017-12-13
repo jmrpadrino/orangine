@@ -24,14 +24,14 @@
     <div class="row">
         <div class="col-xs-8 skew-border">
             <div class="row">
-                <div class="col-xs-9">
+                <div class="col-xs-9" style="line-height: 12px; padding-top: 20px;">
                     <p>Compra en &iacute;nea</p>
                     <p>www.orangine.com.ec</p>
                 </div>
-                <div class="col-xs-3">
-                    <img class="pull-right" src="<?= get_template_directory_uri(); ?>/images/APP.png" alt="Descarga el App de Orangine" width="60" style="margin-top: 10px;">
-                    <p>Descarga</p>
-                    <p>Nuestra</p>
+                <div class="col-xs-3" style="line-height: 12px; padding-top: 20px;">
+                    <img class="pull-right" src="<?= get_template_directory_uri(); ?>/images/APP.png" alt="Descarga el App de Orangine" width="60" style="position: absolute; right: 0;top: 9px;">
+                    <p class="text-right" style="margin-right: 80px;">Descarga</p>
+                    <p class="text-right" style="margin-right: 80px;">Nuestra</p>
                 </div>
             </div>
         </div>
@@ -77,12 +77,17 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin: 48px auto;">
         <div class="col-sm-8 col-sm-offset-2">
-            <div class="banda-blanca" style="font-size: 16px; margin-top: 36px;">
-            <span style="float: right; margin-left: -28px; background-color: #fff; overflow: auto; border-top-right-radius: 4px; border-bottom-right-radius: 4px;padding: 10px 0; padding-left: 40px; margin-top: 13px;">Nota: Al momento el servicio a domicilio aplica &uacute;nicamente para la ciudad de Quito. <br />Período de entrega estimado es de 48 horas.</span>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-info-blue.png" style="float: right; width: 100px; margin-left: 48px;">
+            <div class="row">
+                <div class="col-xs-2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-info-blue.png" style="float: right; width: 100px; margin-left: 48px;">        
+                </div>
+                <div class="col-xs-10">
+                    <span style="font-size: 24px;text-align: justify;margin-top: 18px;display: block;color: #001B7A;">Nota: Al momento el servicio a domicilio aplica &uacute;nicamente para la ciudad de Quito. <br />Período de entrega estimado es de 48 horas.</span>
+                </div>
             </div>
+            
         </div>
     </div>
 </div>

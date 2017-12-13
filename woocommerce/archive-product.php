@@ -32,7 +32,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-    <div class="container">
+    <div class="container-fluid">
     <header class="woocommerce-products-header">
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -81,7 +81,7 @@ get_header( 'shop' ); ?>
 						 */
 						do_action( 'woocommerce_shop_loop' );
 					?>
-					<div class="col-sm-6 orangine-archive-single-product">
+					<div class="col-sm-6 col-md-4 col-lg-3 orangine-archive-single-product">
 					<?php wc_get_template_part( 'content', 'product' ); ?>
 					</div>
 
