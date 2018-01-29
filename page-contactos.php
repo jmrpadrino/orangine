@@ -1,96 +1,48 @@
-<?php get_header(); the_post(); ?>
-<?php //echo the_title(); ?>
+<style>
+    span.wpcf7-not-valid-tip {
+        margin-top: -36px;
+        font-size: 12px!important;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+</style>
+<?php
+get_header();
+the_post();
+?>
+<?php //echo the_title();    ?>
 <div class="container" style="font-size: 18px; line-height: 1.5;">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <div class="contact-content" style="margin-bottom: 72px;">
+            <div class="contact-content" style="margin-bottom: 36px;">
                 <?php the_content(); ?>            
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <img src="<?= get_template_directory_uri(); ?>/images/orangine-call-center.png" alt="Orangine Call Center" class="img-responsive">
+    <div class="row" style="display: flex;">
+        <div class="col-sm-3 hidden-xs">
+            <img src="<?= get_template_directory_uri(); ?>/images/orangine-call-center.png" alt="Orangine Call Center" class="img-responsive" style="position: absolute; bottom: 0;">
         </div>
         <div class="col-sm-9">
             <div class="row content-contact radius-top">
                 <div class="col-sm-1">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-info.png" alt="Orangine contacto" style="width: 65px;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-info.png" alt="Orangine contacto" style="width: 45px;">
                 </div>
                 <div class="col-sm-11">
-                    <p>Para nosotros es importante solventar tus dudas y consultas, si deseas comunicarte con un departamento específico d&eacute;janos tus datos y nos pondremos en contacto contigo.</p>
+                    <p>Para nosotros es importante solventar tus dudas y consultas, sin deseas comunicarte con un departamento específico, d&eacute;janos tus datos y nos pondremos en contacto contigo.</p>
                 </div>
             </div>
             <div class="row content-contact bottom">
-                <div class="col-sm-9">
-                    <form id="contact-form" role="form" class="contact-form">
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <label for="nombres">Nombres y Apellidos</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <input name="nombres" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <label for="telefono">N&uacute;mero Telef&oacute;nico</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <input name="telefono" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <label for="ciudad">Ciudad</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <input name="ciudad" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <input name="email" type="email" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3 text-right">
-                                <label for="mensaje">Mensaje</label>
-                            </div>
-                            <div class="col-sm-9">
-                                <textarea name="mensaje" class="form-control"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <input type="submit" class="btn btn-primary pull-right" value="Enviar">
-                            </div>
-                        </div>
-                    </form>
+                <div class="col-sm-12">
+                    <?php //funcion_correo(); ?>
+                    <?php echo do_shortcode('[contact-form-7 id="307" title="Contact-US" html_class="contact-form" html_role="form"]'); ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div style="min-height: 150px; display: flex; align-content: center; justify-content: center; color: white; background-color: #152183;">
+    <h3 style="margin: auto; font-size: 36px; font-weight: bold;">¿C&oacute;mo llegar?</h3>
+</div>
 <div id="gmap" style="height: 350px;"></div>
-<script type="text/javascript">
-    function initMap(){
-        var map = new google.maps.Map(document.getElementById('gmap'), {
-            zoom: 16,
-            //styles: styles,
-            center: { lat: -0.284611, lng:-78.559208},
-            mapTypeId: 'roadmap'
-        });
-        var marker = new google.maps.Marker({
-            //icon: 'https://www.gogalapagos.com/cnt/themes/galapagos/images/air_plane_icon.png',
-            position: { lat: -0.284611, lng:-78.559208},
-            map: map,
-            title: 'Orangine'
-        });
-    }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGds9FjlnAoR3dpbkG7iH-c7CYoYWHk1o&callback=initMap"></script>
 <?php get_footer(); ?>

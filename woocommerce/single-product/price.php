@@ -23,4 +23,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
+<!-- Otro desarrollo Jose Manuel Rodriguez - jmrpadrino@gmail.com - choclomedia.com -->
 <p class="price">Desde <?php echo $product->get_price_html(); ?></p>

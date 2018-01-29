@@ -50,7 +50,6 @@ get_header( 'shop' ); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 		?>
-
     </header>
     
 
@@ -84,6 +83,7 @@ get_header( 'shop' ); ?>
 					<div class="col-sm-6 col-md-4 col-lg-3 orangine-archive-single-product">
 					<?php wc_get_template_part( 'content', 'product' ); ?>
 					</div>
+					<!-- Otro desarrollo Jose Manuel Rodriguez - jmrpadrino@gmail.com - choclomedia.com -->
 
 				<?php endwhile; // end of the loop. ?>
 

@@ -1,6 +1,6 @@
 <?php get_header(); the_post(); $prefix = 'orangine__'; ?>
 <?php //echo the_title(); ?>
-<div class="container" style="margin-top: 36px; margin-bottom: 36px;">
+<div class="container-fluid con-fondo" style="padding-top: 36px; padding-bottom: 36px;">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="row">
@@ -14,7 +14,7 @@
                     }
                     ?>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-5 hidden-xs">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/contact-redondo-grande.png" class="img-responsive" style="border-radius: 50%; border: 10px solid white; box-shadow: 0px 0px 17px black;" width="350" height="350">
                 </div>
             </div>
@@ -33,12 +33,12 @@
                     }
                     ?>
                 </div>
-                <div class="col-sm-5">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/contact-redondo-mediano.png" class="img-responsive" style="border-radius: 50%; border: 10px solid white; box-shadow: 0px 0px 17px black;" width="250" height="250">
+                <div class="col-sm-5 hidden-xs">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/contact-redondo-mediano.png" class="img-responsive" style="border-radius: 50%; border: 10px solid white; box-shadow: 0px 0px 17px black;transform: translateY(-12%);" width="250" height="250">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-5 col-sm-offset-7">
+                <div class="col-sm-5 col-sm-offset-7 hidden-xs">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/contact-redondo-pequeno.png" class="img-responsive" style="border-radius: 50%; border: 10px solid white; box-shadow: 0px 0px 17px black;" width="150" height="150">
                 </div>
             </div>

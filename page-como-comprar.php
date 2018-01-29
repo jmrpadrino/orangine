@@ -22,20 +22,20 @@
 </style>
 <div class="container-fluid nopadding">
     <div class="row">
-        <div class="col-xs-8 skew-border">
+        <div class="col-sm-8 skew-border">
             <div class="row">
-                <div class="col-xs-9" style="line-height: 12px; padding-top: 20px;">
-                    <p>Compra en &iacute;nea</p>
+                <div class="col-xs-6 col-sm-9" style="line-height: 12px; padding-top: 20px;">
+                    <p>Compra en l&iacute;nea</p>
                     <p>www.orangine.com.ec</p>
                 </div>
-                <div class="col-xs-3" style="line-height: 12px; padding-top: 20px;">
+                <div class="col-xs-6 col-sm-3" style="line-height: 12px; padding-top: 20px;">
                     <img class="pull-right" src="<?= get_template_directory_uri(); ?>/images/APP.png" alt="Descarga el App de Orangine" width="60" style="position: absolute; right: 0;top: 9px;">
                     <p class="text-right" style="margin-right: 80px;">Descarga</p>
                     <p class="text-right" style="margin-right: 80px;">Nuestra</p>
                 </div>
             </div>
         </div>
-        <div class="col-xs-3 col-xs-offset-1"><img src="<?= get_template_directory_uri(); ?>/images/aapstore-androide.png" class="pull-left img-responsive"></div>
+        <div class="col-sm-3 col-xs-offset-1"><img src="<?= get_template_directory_uri(); ?>/images/aapstore-androide.png" class="pull-left img-responsive"></div>
     </div>
 </div>
 <div class="container-fluid">
@@ -80,10 +80,10 @@
     <div class="row" style="margin: 48px auto;">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="row">
-                <div class="col-xs-2">
+                <div class="col-sm-2 hidden-xs">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/icon-info-blue.png" style="float: right; width: 100px; margin-left: 48px;">        
                 </div>
-                <div class="col-xs-10">
+                <div class="col-sm-10">
                     <span style="font-size: 24px;text-align: justify;margin-top: 18px;display: block;color: #001B7A;">Nota: Al momento el servicio a domicilio aplica &uacute;nicamente para la ciudad de Quito. <br />Período de entrega estimado es de 48 horas.</span>
                 </div>
             </div>
